@@ -6,17 +6,6 @@ using UnityEngine.SceneManagement;
 public class rockTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     void OnCollisionEnter(Collision hit) {
         if (hit.collider.tag == "boat") {
             Debug.Log("Removing ship");
