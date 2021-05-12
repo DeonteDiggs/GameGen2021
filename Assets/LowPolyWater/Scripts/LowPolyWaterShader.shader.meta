@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 58e0ea33eb129124ea920b2a8e8e2d8b
+timeCreated: 1515287198
+licenseType: Free
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _normalwater: {fileID: 2800000, guid: 99d2cdba8fb69544c85a1d31afe4d740, type: 3}
+  - _WaterNormal: {fileID: 2800000, guid: 99d2cdba8fb69544c85a1d31afe4d740, type: 3}
+  - _WorldReflection: {fileID: 8900000, guid: 56a68e301a0ff55469ae441c0112d256, type: 3}
+  - _DistortionBump: {fileID: 2800000, guid: 31890676c5b178840848afa665cb5a2f, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
