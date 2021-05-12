@@ -16,6 +16,10 @@ public class targetObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = targetBoat.transform.position;
+        if (targetBoat != null) {        
+            transform.position = targetBoat.transform.position;
+        } else if (targetBoat == null) {
+            targetBoat = GameObject.FindGameObjectWithTag("boat"); 
+        }
     }
 }
