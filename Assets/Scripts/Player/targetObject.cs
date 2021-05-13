@@ -15,4 +15,10 @@ public class targetObject : MonoBehaviour
             targetBoat = GameObject.FindGameObjectWithTag("boat"); 
         }
     }
+
+    // Switch between ships.
+    // value is a positive or negative number. 
+    public void SwitchShip(float value) {
+        
+    }
 }

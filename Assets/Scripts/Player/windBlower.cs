@@ -57,17 +57,37 @@ public class windBlower : MonoBehaviour
         }
     }
 
+    void FireProjectile() 
+    {
 
-    public void Fire(InputAction.CallbackContext context)
+    }
+
+    //==Input Code==
+    public void Blow(InputAction.CallbackContext context)
     {
         Debug.Log("Fire!");
         CheckForBoat();
     }
 
-    //Move around a radius
+    // Move around a radius
     public void Move(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<float>();
+    }
+
+    public void SwitchShips(InputAction.CallbackContext context) 
+    {
+        // Get value from context, round it up to nearest whole (-1 or 1) just for safety
+
+        // Use that value to go back and forth in the list stored in gameplayManager
+        // We should probably use a function in gameplayManager.
+    }
+
+    // Get input to fire a projectile
+    public void Shoot(InputAction.CallbackContext context) 
+    {
+        Debug.Log("Shoot!");
+        FireProjectile();
     }
 
     //Applies the boat force to our captured boat object.
