@@ -18,7 +18,7 @@ public class waveManager : MonoBehaviour
         if( instance == null ){
             instance = this;
         } else if( instance != this){
-            //destroy(this);
+            Destroy(this);
         }
     }
 
