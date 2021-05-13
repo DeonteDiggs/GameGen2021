@@ -11,7 +11,7 @@ using UnityEngine;
 */
 public class gameplayManager : MonoBehaviour
 {
-    static List<GameObject> ships = new List<GameObject>();
+    public List<GameObject> ships = new List<GameObject>();
 
     // Variable to keep track of score
     public static int Score;
