@@ -3,29 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class windBlower : MonoBehaviour
-{
-    /*
+/*
      * This class handles code for the wind blower object, including
      * its movement code, its code for adding force to a specific object
      * (specifically objects with the 'boat' tag), and code for getting input.
      * obviously incredibly unpolished/disorganized.
      * apologies if i've violated C# code-style guidelines, I come from a Java background. 
-     */
-
-    //variable that stores our boat object obtained by raycasting.
+*/
+public class windBlower : MonoBehaviour
+{
+    // Variable that stores our boat object obtained by raycasting.
     public Rigidbody boatRb;
 
-    //Object that windBlower should rotate around
+    // Object that windBlower should rotate around
     public GameObject targetObject;
 
-    //How fast should the play rotate around targetObject?
+    // How fast should the play rotate around targetObject?
     public float moveSpeed;
 
-    //What direction will they move in?
+    // What direction will they move in?
     public float direction;
 
-    //How much force do we apply to boat?
+    // How much force do we apply to boat?
     public float boatForce;
 
     // Update is called once per frame
@@ -39,7 +38,8 @@ public class windBlower : MonoBehaviour
     //If we find boat object, store it's rigidbody in boat variable and applyForce().
     void CheckForBoat()
     {
-        //Raycast collider.
+        // Raycast collider.
+        // TODO: Raycast should ignore all non-boat objects.
         Ray ray = new Ray(transform.position, transform.forward);
 
         if (Physics.Raycast(ray, out RaycastHit hit))
@@ -57,7 +57,7 @@ public class windBlower : MonoBehaviour
         }
     }
 
-    void FireProjectile() 
+    void FireProjectile()
     {
 
     }
@@ -75,7 +75,7 @@ public class windBlower : MonoBehaviour
         direction = context.ReadValue<float>();
     }
 
-    public void SwitchShips(InputAction.CallbackContext context) 
+    public void SwitchShips(InputAction.CallbackContext context)
     {
         // Get value from context, round it up to nearest whole (-1 or 1) just for safety
 
@@ -84,7 +84,7 @@ public class windBlower : MonoBehaviour
     }
 
     // Get input to fire a projectile
-    public void Shoot(InputAction.CallbackContext context) 
+    public void Shoot(InputAction.CallbackContext context)
     {
         Debug.Log("Shoot!");
         FireProjectile();

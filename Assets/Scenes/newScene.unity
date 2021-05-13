@@ -337,7 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8233f39b9a525f4439e84d9f787ea6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: 0
   PlayerSpawnLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &481821193
 GameObject:
@@ -447,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 8898576490851954177, guid: c1a8ea252a87ca949af0e83c6e9d0390,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.649131
+      value: 19.06
       objectReference: {fileID: 0}
     - target: {fileID: 8898576490851954177, guid: c1a8ea252a87ca949af0e83c6e9d0390,
         type: 3}
@@ -1791,7 +1790,7 @@ PrefabInstance:
     - target: {fileID: 8898576490851954177, guid: c1a8ea252a87ca949af0e83c6e9d0390,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.649131
+      value: 4.82
       objectReference: {fileID: 0}
     - target: {fileID: 8898576490851954177, guid: c1a8ea252a87ca949af0e83c6e9d0390,
         type: 3}
