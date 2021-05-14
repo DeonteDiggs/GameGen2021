@@ -9,7 +9,7 @@ using UnityEngine;
         - win conditions.
     ideally this class should be global.    
 */
-public class gameplayManager : MonoBehaviour
+public class gameplayManager : Singleton<gameplayManager>
 {
     public List<GameObject> ships = new List<GameObject>();
 
@@ -28,7 +28,7 @@ public class gameplayManager : MonoBehaviour
     States currentState;
 
     // Constructor
-    public gameplayManager() {
+    protected gameplayManager() {
         currentState = States.inGame;
         //GetShipList();
     }

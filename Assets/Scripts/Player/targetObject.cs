@@ -6,11 +6,10 @@ public class targetObject : MonoBehaviour
 {
     public GameObject targetBoat;
 
-    private gameplayManager gameManageScript;
-
     public int shipIndex = 0;
 
     void Start() {
+        /*
         GameObject gameManager = GameObject.Find("gameManagement");
 
         if (gameManager == null) {
@@ -18,8 +17,9 @@ public class targetObject : MonoBehaviour
         } else {
             gameManageScript = gameManager.GetComponent<gameplayManager>();
         }
+        */
 
-        targetBoat = gameManageScript.ships[shipIndex];
+        targetBoat = gameplayManager.Instance.ships[shipIndex];
     }
 
     // Update is called once per frame
@@ -43,13 +43,13 @@ public class targetObject : MonoBehaviour
          int intendedShipIndex = shipIndex + (int)value;
 
          if (intendedShipIndex < 0) {
-             shipIndex = (gameManageScript.ships.Count) - 1;
-         } else if (intendedShipIndex > (gameManageScript.ships.Count) - 1) {
+             shipIndex = (gameplayManager.Instance.ships.Count) - 1;
+         } else if (intendedShipIndex > (gameplayManager.Instance.ships.Count) - 1) {
              shipIndex = 0;
          } else {
              shipIndex = intendedShipIndex;
          }
 
-         targetBoat = gameManageScript.ships[shipIndex];
+         targetBoat = gameplayManager.Instance.ships[shipIndex];
     }
 }
