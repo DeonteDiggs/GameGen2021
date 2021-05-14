@@ -8,6 +8,8 @@ public class targetObject : MonoBehaviour
 
     private gameplayManager gameManageScript;
 
+    public int shipIndex = 0;
+
     void Start() {
         GameObject gameManager = GameObject.Find("gameManagement");
 
@@ -16,6 +18,8 @@ public class targetObject : MonoBehaviour
         } else {
             gameManageScript = gameManager.GetComponent<gameplayManager>();
         }
+
+        targetBoat = gameManageScript.ships[shipIndex];
     }
 
     // Update is called once per frame
@@ -31,6 +35,11 @@ public class targetObject : MonoBehaviour
     // Switch between ships.
     // value is a positive or negative number. 
     public void SwitchTargetShip(float value) {
-        
+        //if value is less than 0, its -1.
+        //if value is greater than 0, its +1.
+
+         Debug.Log(value);
+         
+         
     }
 }
