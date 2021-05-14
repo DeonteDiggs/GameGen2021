@@ -92,7 +92,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _VirtexDistortion: 0
-    - _WaterDepth: 0.64
+    - _WaterDepth: 4.92
     - _WaterFalloff: -3.6
     - _ZWrite: 1
     - __dirty: 1
@@ -101,4 +101,4 @@ Material:
     - _DepthColor: {r: 0.493948, g: 0.918055, b: 0.9433962, a: 0.9490196}
     - _EdgeColor: {r: 1, g: 0.92528915, b: 0.9339623, a: 0.9490196}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _WaterGlossiness: {r: 0.3235294, g: 0.3235294, b: 0.3235294, a: 0}
+    - _WaterGlossiness: {r: 0.3235294, g: 0.3235294, b: 1, a: 0}
