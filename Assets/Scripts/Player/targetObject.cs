@@ -40,6 +40,16 @@ public class targetObject : MonoBehaviour
 
          Debug.Log(value);
          
-         
+         int intendedShipIndex = shipIndex + (int)value;
+
+         if (intendedShipIndex < 0) {
+             shipIndex = (gameManageScript.ships.Count) - 1;
+         } else if (intendedShipIndex > (gameManageScript.ships.Count) - 1) {
+             shipIndex = 0;
+         } else {
+             shipIndex = intendedShipIndex;
+         }
+
+         targetBoat = gameManageScript.ships[shipIndex];
     }
 }
