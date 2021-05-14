@@ -9,12 +9,12 @@ using UnityEngine;
         - win conditions.
     ideally this class should be global.    
 */
-public class gameplayManager : MonoBehaviour
+public class gameplayManager : Singleton<gameplayManager>
 {
     public List<GameObject> ships = new List<GameObject>();
 
     // Variable to keep track of score
-    public static int Score;
+    static int Score;
 
     // The spawn location
     public Vector3 PlayerSpawnLocation;
@@ -28,7 +28,7 @@ public class gameplayManager : MonoBehaviour
     States currentState;
 
     // Constructor
-    public gameplayManager() {
+    protected gameplayManager() {
         currentState = States.inGame;
         //GetShipList();
     }
@@ -68,5 +68,20 @@ public class gameplayManager : MonoBehaviour
 
     void OnLevelComplete() {
         currentState = States.levelComplete;
+    }
+
+    // Setter for the game score.
+    public void SetScore(int value) {
+        Score = value;
+    }
+
+    // Function to add to the game score
+    public void AddToScore(int value) {
+        Score += value;
+    }
+
+    // Getter for the game score
+    public int GetScore() {
+        return(Score);
     }
 }

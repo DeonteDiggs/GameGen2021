@@ -78,10 +78,12 @@ public class windBlower : MonoBehaviour
     public void SwitchShips(InputAction.CallbackContext context)
     {
         // Get value from context, round it up to nearest whole (-1 or 1) just for safety
-
+        Debug.Log(context);
 
         // Use that value to go back and forth in the list stored in gameplayManager
         // We should probably use a function in gameplayManager.
+        targetObject tO = transform.parent.GetComponent<targetObject>();
+        tO.SwitchTargetShip(context.ReadValue<float>());
     }
 
     // Get input to fire a projectile
