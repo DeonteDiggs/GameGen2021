@@ -45,7 +45,7 @@ public class gameplayManager : Singleton<gameplayManager>
         
     }
 
-    void GetShipList() {
+    public void GetShipList() {
         //use GameObject.getgameobjectswithtag to get array of ships in play.
         //convert this ship to a nice list.
         GameObject[] shipArray = GameObject.FindGameObjectsWithTag("boat");
@@ -58,6 +58,8 @@ public class gameplayManager : Singleton<gameplayManager>
         }
     }
 
+
+    // We should probably use event listeners for these On functions?
     void OnGameOver() {
         currentState = States.gameOver;
     }

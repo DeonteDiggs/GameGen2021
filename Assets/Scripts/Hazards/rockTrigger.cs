@@ -7,6 +7,7 @@ public class rockTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     void OnCollisionEnter(Collision hit) {
+        /*
         if (hit.collider.tag == "boat") {
             Debug.Log("Removing ship");
             Destroy(hit.gameObject);
@@ -22,5 +23,6 @@ public class rockTrigger : MonoBehaviour
                 SceneManager.LoadScene("SampleScene");     
             } 
         }
+        */
     }
 }

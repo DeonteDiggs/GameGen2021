@@ -18,6 +18,9 @@ public class windBlower : MonoBehaviour
     // Object that windBlower should rotate around
     public GameObject targetObject;
 
+    // Object that we should instantiate in FireProjectile()
+    public GameObject playerProjectile;
+
     // How fast should the play rotate around targetObject?
     public float moveSpeed;
 
