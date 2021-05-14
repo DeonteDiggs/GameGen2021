@@ -30,6 +30,8 @@ public class targetObject : MonoBehaviour
         } else if (targetBoat == null) {
             targetBoat = GameObject.FindGameObjectWithTag("boat"); 
         }
+
+        Debug.Log("ships count: " + gameplayManager.Instance.ships.Count);
     }
 
     // Switch between ships.
