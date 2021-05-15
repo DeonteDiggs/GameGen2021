@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * File created by following the following Youtube tutorial: https://www.youtube.com/watch?v=eL_zHQEju8s
+ * 
+ * The purpose of this script is to create the waves.
+ *
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

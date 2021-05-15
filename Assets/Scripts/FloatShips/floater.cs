@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class floater : MonoBehaviour
 {
+    [Tooltip("Add the rigidbody component of the object that requires floating here.")]
     public Rigidbody rigidbody;
     public float depthBeforeSubmerged = 1f;
     public float displacementAmount = 3f;
