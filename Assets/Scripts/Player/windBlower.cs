@@ -16,10 +16,12 @@ public class windBlower : MonoBehaviour
     public Rigidbody boatRb;
 
     // Object that windBlower should rotate around
-    public GameObject targetObject;
+    public GameObject targetGameObject;
 
     // Object that we should instantiate in FireProjectile()
     public GameObject playerProjectile;
+
+    public targetObject targetObjectScript;
 
     // How fast should the play rotate around targetObject?
     public float moveSpeed;
@@ -30,11 +32,17 @@ public class windBlower : MonoBehaviour
     // How much force do we apply to boat?
     public float boatForce;
 
+    void Start()
+    {
+        targetGameObject = transform.parent.gameObject;
+        targetObjectScript = targetGameObject.GetComponent<targetObject>();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         //checkForBoat();
-        transform.RotateAround(targetObject.transform.position, Vector3.up, ((moveSpeed * direction) * Time.deltaTime));
+        transform.RotateAround(targetGameObject.transform.position, Vector3.up, ((moveSpeed * direction) * Time.deltaTime));
     }
 
     //called by button press; sends a raycast to check for boat object.
@@ -82,11 +90,14 @@ public class windBlower : MonoBehaviour
     {
         // Get value from context, round it up to nearest whole (-1 or 1) just for safety
         Debug.Log(context);
-
         // Use that value to go back and forth in the list stored in gameplayManager
         // We should probably use a function in gameplayManager.
-        targetObject tO = transform.parent.GetComponent<targetObject>();
-        tO.SwitchTargetShip(context.ReadValue<float>());
+        
+
+        if (context.performed) {
+            targetObjectScript.SwitchTargetShip(context.ReadValue<float>());
+        }
+        
     }
 
     // Get input to fire a projectile
