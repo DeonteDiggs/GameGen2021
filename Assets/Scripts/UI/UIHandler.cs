@@ -1,51 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UIHandler: MonoBehaviour
 {
+    [Header("Handle Enabling/Disabling Menus")]
+    [SerializeField] private GameObject[] handleMenuActivations;
     
-    [SerializeField] private GameObject[] enableMenus;
-    [SerializeField] private GameObject[] disableMenus;
     [SerializeField] private GameObject backButton;
+       
+
+    [SerializeField] private int nextScene;
 
     private bool isOptionsMenu;
+    
+    [Header("Handle LevelSelection Menu")]
     private bool isLevelSelectionMenu;
+    [SerializeField] private Button[] levelButtons;
 
     public void OnPlayButton() {
-        enableMenus[0].SetActive(false);
-        enableMenus[2].SetActive(true);
+        handleMenuActivations[0].SetActive(false);
+        handleMenuActivations[2].SetActive(true);
         backButton.SetActive(true);
         isLevelSelectionMenu = true;
+        HandLevelButtonInteractions();
     }
 
     public void OnOptionsButton() {
-        enableMenus[0].SetActive(false);
-        enableMenus[1].SetActive(true);
+        handleMenuActivations[0].SetActive(false);
+        handleMenuActivations[1].SetActive(true);
         backButton.SetActive(true);
         isOptionsMenu = true;
     }
+
+    public void OnControlsButton() => handleMenuActivations[3].SetActive(true); 
+  
 
     public void OnBackButton() {
 
         if (isOptionsMenu)
         {
-            enableMenus[0].SetActive(true);
-            enableMenus[1].SetActive(false);
+            handleMenuActivations[0].SetActive(true);
+            handleMenuActivations[3].SetActive(false);
+            handleMenuActivations[1].SetActive(false);
             backButton.SetActive(false);
             isOptionsMenu = false;
+            
         }
 
         else if (isLevelSelectionMenu)
         {
-            enableMenus[0].SetActive(true);
-            enableMenus[2].SetActive(false);
+            handleMenuActivations[0].SetActive(true);
+            handleMenuActivations[2].SetActive(false);
             backButton.SetActive(false);
             isLevelSelectionMenu = false;
         }
     }
 
-    public void OnQuitButton() {
-        Application.Quit();
+    public void OnQuitButton() => Application.Quit();
+    public void ChangeNextScene() => SceneManager.LoadScene(nextScene);
+
+    void HandLevelButtonInteractions() {
+        for (int i = 0; i < levelButtons.Length; i++)
+        {
+            if (i + 1 > 0)
+                levelButtons[i].interactable = false;
+            
+        }
     }
 }
