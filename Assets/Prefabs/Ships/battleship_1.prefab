@@ -1835,6 +1835,7 @@ GameObject:
   - component: {fileID: 7297291765635825934}
   - component: {fileID: 5459953047093845868}
   - component: {fileID: 5867593282419745514}
+  - component: {fileID: 2539657489319042785}
   m_Layer: 0
   m_Name: battleship_1
   m_TagString: boat
@@ -1912,6 +1913,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2539657489319042785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7930522963653893044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e490374b85bbfc4ca5130cae0e13002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8118794925824129885
 GameObject:
   m_ObjectHideFlags: 0
