@@ -31,7 +31,7 @@ public class targetObject : MonoBehaviour
             targetBoat = GameObject.FindGameObjectWithTag("boat"); 
         }
 
-        Debug.Log("ships count: " + gameplayManager.Instance.ships.Count);
+        //Debug.Log("ships count: " + gameplayManager.Instance.ships.Count);
     }
 
     // Switch between ships.
@@ -40,18 +40,20 @@ public class targetObject : MonoBehaviour
         //if value is less than 0, its -1.
         //if value is greater than 0, its +1.
 
-         Debug.Log(value);
-         
-         int intendedShipIndex = shipIndex + (int)value;
+        shipIndex += (int)value;
 
-         if (intendedShipIndex < 0) {
-             shipIndex = (gameplayManager.Instance.ships.Count) - 1;
-         } else if (intendedShipIndex > (gameplayManager.Instance.ships.Count) - 1) {
-             shipIndex = 0;
-         } else {
-             shipIndex = intendedShipIndex;
-         }
+        Debug.Log(shipIndex);
 
-         targetBoat = gameplayManager.Instance.ships[shipIndex];
+        int currentShipCount = gameplayManager.Instance.ships.Count;
+
+        if (shipIndex < 0) {
+            //targetBoat = gameplayManager.Instance.ships[currentShipCount - 1];
+            shipIndex = currentShipCount - 1;
+        } else if (shipIndex > currentShipCount - 1) {
+            //targetBoat = gameplayManager.Instance.ships[0]
+            shipIndex = 0;
+        } 
+
+        targetBoat = gameplayManager.Instance.ships[shipIndex];
     }
 }

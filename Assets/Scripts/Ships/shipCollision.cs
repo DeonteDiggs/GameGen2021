@@ -9,14 +9,14 @@ public class shipCollision : MonoBehaviour
     {
         if (hit.gameObject.tag == "hazard") 
         {
+            // Remove itself from the ship list in gameplay manager
+            gameplayManager.Instance.ships.Remove(gameObject);
             Destroy(gameObject);
         }
     }
 
     void OnDestroy() 
     {
-        // Remove itself from the ship list in gameplay manager
-        gameplayManager.Instance.ships.Remove(gameObject);
-
+        
     }
 }
