@@ -7,7 +7,7 @@ public class UIHandler: MonoBehaviour
 {
     [Header("Handle Enabling/Disabling Menus")]
     [SerializeField] private GameObject[] handleMenuActivations;
-    
+    [SerializeField] private GameObject gameTitle;
     [SerializeField] private GameObject backButton;
        
 
@@ -21,6 +21,7 @@ public class UIHandler: MonoBehaviour
 
     public void OnPlayButton() {
         handleMenuActivations[0].SetActive(false);
+        gameTitle.SetActive(false);
         handleMenuActivations[2].SetActive(true);
         backButton.SetActive(true);
         isLevelSelectionMenu = true;
@@ -29,19 +30,21 @@ public class UIHandler: MonoBehaviour
 
     public void OnOptionsButton() {
         handleMenuActivations[0].SetActive(false);
+        gameTitle.SetActive(false);
         handleMenuActivations[1].SetActive(true);
         backButton.SetActive(true);
         isOptionsMenu = true;
     }
 
-    public void OnControlsButton() => handleMenuActivations[3].SetActive(true); 
-  
+    public void OnControlsButton() => handleMenuActivations[3].SetActive(true);
 
+    public void DisableControlsMenu() => handleMenuActivations[3].SetActive(false);
     public void OnBackButton() {
 
         if (isOptionsMenu)
         {
             handleMenuActivations[0].SetActive(true);
+            gameTitle.SetActive(true);
             handleMenuActivations[3].SetActive(false);
             handleMenuActivations[1].SetActive(false);
             backButton.SetActive(false);
@@ -52,6 +55,7 @@ public class UIHandler: MonoBehaviour
         else if (isLevelSelectionMenu)
         {
             handleMenuActivations[0].SetActive(true);
+            gameTitle.SetActive(true);
             handleMenuActivations[2].SetActive(false);
             backButton.SetActive(false);
             isLevelSelectionMenu = false;
