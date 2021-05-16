@@ -19,7 +19,7 @@
                     "id": "1b56605b-b4d1-4b69-87b3-04f24708b0a7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Shoot",
@@ -62,7 +62,7 @@
                     "name": "",
                     "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
                     "path": "<Keyboard>/#(Z)",
-                    "interactions": "",
+                    "interactions": "Hold(duration=4)",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Blow",

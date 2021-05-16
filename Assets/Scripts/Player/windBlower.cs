@@ -32,6 +32,36 @@ public class windBlower : MonoBehaviour
     // How much force do we apply to boat?
     public float boatForce;
 
+    // trying to add logic to put force on hold 
+    public float power = 100.0F;
+
+/*    public GameControls controls;
+
+    void Awake()
+    {
+        Debug.Log("Called Awake");
+        controls.Player.Blow.performed += ctx => Blow(ctx.ReadValue<Call);
+    }
+
+    private void OnEnable()
+    {
+        controls.Disable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
+    }*/
+
+    /*    private void OnEnable()
+        {
+            Debug.Log("In Enable");
+            controls.Player.Blow.performed += Blow;
+            controls.Player.Blow.Enable();
+        }*/
+
+
+
     void Start()
     {
         targetGameObject = transform.parent.gameObject;
