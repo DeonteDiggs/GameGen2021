@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 	public GameObject spawnPrefab;
+	public GameObject[] spawnPrefabs;
 
 	public float speed = 20.0f;
 	public float minDist = 1f;
@@ -41,13 +42,13 @@ public class Spawner : MonoBehaviour
 
 	void MakeThingToSpawn()
 	{
+		int indexOfObjectToSpawn = Random.Range(0, spawnPrefabs.Length - 1);
 		// create a new gameObject
-		GameObject clone = Instantiate(spawnPrefab, transform.position, transform.rotation) as GameObject;
+		GameObject clone = Instantiate(spawnPrefabs[indexOfObjectToSpawn], transform.position, transform.rotation) as GameObject;
 
 		if ((target != null) && (clone.gameObject.GetComponent<MoveTowards>() != null))
 		{
 			clone.gameObject.GetComponent<MoveTowards>().SetTarget();
-			Object.Destroy(clone, 5.0f);
 		}
 	}
 }

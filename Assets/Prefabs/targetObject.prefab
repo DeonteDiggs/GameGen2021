@@ -112,9 +112,9 @@ MonoBehaviour:
   targetGameObject: {fileID: 0}
   playerProjectile: {fileID: 0}
   targetObjectScript: {fileID: 0}
-  moveSpeed: 2000
+  moveSpeed: 1500
   direction: 0
-  boatForce: 100
+  boatForce: 90
 --- !u!114 &4220408556412409833
 MonoBehaviour:
   m_ObjectHideFlags: 0

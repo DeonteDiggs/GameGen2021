@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MoveTowards : MonoBehaviour
 {
-	public float speed = 20.0f;
+	private Spawner sp;
+	private float speed;
 	public float minDist = 1f;
 	public Transform target;
 
@@ -20,6 +21,9 @@ public class MoveTowards : MonoBehaviour
 				target = GameObject.FindGameObjectsWithTag("Destination")[Random.Range(0, (GameObject.FindGameObjectsWithTag("Destination").Length-1))].GetComponent<Transform>();
 			}
 		}
+
+		sp = (Spawner) FindObjectOfType(typeof(Spawner));
+		speed = sp.speed;
 	}
 
 	// Update is called once per frame
@@ -35,8 +39,11 @@ public class MoveTowards : MonoBehaviour
 		float distance = Vector3.Distance(transform.position, target.position);
 
 		//so long as the chaser is farther away than the minimum distance, move towards it at rate speed.
-		if (distance > minDist)
+		if (distance > minDist){
 			transform.position += transform.forward * speed * Time.deltaTime;
+		} else {
+			Destroy(transform.gameObject);
+		}
 	}
 
 	// Set the target of the chaser
