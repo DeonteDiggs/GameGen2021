@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-	public GameObject spawnPrefab;
 	public GameObject[] spawnPrefabs;
 
 	public float speed = 20.0f;
