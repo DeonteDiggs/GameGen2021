@@ -32,10 +32,16 @@ public class windBlower : MonoBehaviour
     // How much force do we apply to boat?
     public float boatForce;
 
+    // To control wind
+    public Transform wind;
+
     void Start()
     {
         targetGameObject = transform.parent.gameObject;
         targetObjectScript = targetGameObject.GetComponent<targetObject>();
+
+        // Particles System: off
+        wind.GetComponent<ParticleSystem>().enableEmission = false;
     }
 
     // Update is called once per frame
@@ -64,6 +70,7 @@ public class windBlower : MonoBehaviour
                     boatRb = hit.rigidbody;
                     ApplyForce();
                 }
+
             }
         }
     }
@@ -77,6 +84,10 @@ public class windBlower : MonoBehaviour
     public void Blow(InputAction.CallbackContext context)
     {
         Debug.Log("Fire!");
+
+        // Blow: On --> keep blowing --> off
+        StartCoroutine(keepBlowing());
+
         CheckForBoat();
     }
 
@@ -92,12 +103,13 @@ public class windBlower : MonoBehaviour
         Debug.Log(context);
         // Use that value to go back and forth in the list stored in gameplayManager
         // We should probably use a function in gameplayManager.
-        
 
-        if (context.performed) {
+
+        if (context.performed)
+        {
             targetObjectScript.SwitchTargetShip(context.ReadValue<float>());
         }
-        
+
     }
 
     // Get input to fire a projectile
@@ -111,5 +123,15 @@ public class windBlower : MonoBehaviour
     void ApplyForce()
     {
         boatRb.AddForce(transform.forward * boatForce);
+    }
+
+    IEnumerator keepBlowing()
+    {
+        // Particles System: on
+        wind.GetComponent<ParticleSystem>().enableEmission = true;
+        // Keep blowing
+        yield return new WaitForSecondsRealtime(0.75f);
+        // Particles System: off
+        wind.GetComponent<ParticleSystem>().enableEmission = false;
     }
 }
