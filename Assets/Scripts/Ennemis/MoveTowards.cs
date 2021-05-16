@@ -15,9 +15,9 @@ public class MoveTowards : MonoBehaviour
 		if (target == null)
 		{
 
-			if (GameObject.FindWithTag("Destination") != null)
+			if (GameObject.FindGameObjectsWithTag("Destination").Length != 0)
 			{
-				target = GameObject.FindWithTag("Destination").GetComponent<Transform>();
+				target = GameObject.FindGameObjectsWithTag("Destination")[Random.Range(0, (GameObject.FindGameObjectsWithTag("Destination").Length-1))].GetComponent<Transform>();
 			}
 		}
 	}
@@ -40,8 +40,8 @@ public class MoveTowards : MonoBehaviour
 	}
 
 	// Set the target of the chaser
-	public void SetTarget(Transform newTarget)
+	public void SetTarget()
 	{
-		target = newTarget;
+		target =  GameObject.FindGameObjectsWithTag("Destination")[Random.Range(0, (GameObject.FindGameObjectsWithTag("Destination").Length-1))].GetComponent<Transform>();
 	}
 }

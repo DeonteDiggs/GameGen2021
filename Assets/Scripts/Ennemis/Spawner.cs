@@ -15,12 +15,15 @@ public class Spawner : MonoBehaviour
 
 	private float savedTime;
 	private float secondsBetweenSpawning;
+	private Vector3 startingPosition;
+	public float radius = 3f;
 
 	// Use this for initialization
 	void Start()
 	{
 		savedTime = Time.time;
 		secondsBetweenSpawning = Random.Range(minSecondsBetweenSpawning, maxSecondsBetweenSpawning);
+		startingPosition = transform.position;
 	}
 
 	// Update is called once per frame
@@ -28,9 +31,11 @@ public class Spawner : MonoBehaviour
 	{
 		if (Time.time - savedTime >= secondsBetweenSpawning) 
 		{
+			transform.position = new Vector3(Random.Range(radius, -radius), startingPosition.y, startingPosition.z);
 			MakeThingToSpawn();
 			savedTime = Time.time; // store for next spawn
 			secondsBetweenSpawning = Random.Range(minSecondsBetweenSpawning, maxSecondsBetweenSpawning);
+			transform.position = startingPosition;
 		}
 	}
 
@@ -41,7 +46,7 @@ public class Spawner : MonoBehaviour
 
 		if ((target != null) && (clone.gameObject.GetComponent<MoveTowards>() != null))
 		{
-			clone.gameObject.GetComponent<MoveTowards>().SetTarget(target);
+			clone.gameObject.GetComponent<MoveTowards>().SetTarget();
 			Object.Destroy(clone, 5.0f);
 		}
 	}
