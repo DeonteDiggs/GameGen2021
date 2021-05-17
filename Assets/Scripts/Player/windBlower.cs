@@ -37,6 +37,9 @@ public class windBlower : MonoBehaviour
 
     private bool blowEnabled;
 
+    // To control wind
+    public Transform wind;
+
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>
@@ -51,6 +54,9 @@ public class windBlower : MonoBehaviour
     {
         targetGameObject = transform.parent.gameObject;
         targetObjectScript = targetGameObject.GetComponent<targetObject>();
+
+        // Particles System: off
+        wind.GetComponent<ParticleSystem>().enableEmission = false;
     }
 
     // Update is called once per frame
@@ -97,12 +103,14 @@ public class windBlower : MonoBehaviour
     public void startBlow()
     {
         Debug.Log("Start to blow!!");
+        wind.GetComponent<ParticleSystem>().enableEmission = true;
         blowEnabled = true;
     }
 
     public void stopBlow()
     {
         Debug.Log("Stop to blow!!");
+        wind.GetComponent<ParticleSystem>().enableEmission = false;
         blowEnabled = false;
     }
 
