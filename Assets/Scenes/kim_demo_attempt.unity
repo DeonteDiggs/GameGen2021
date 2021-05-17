@@ -962,6 +962,12 @@ PrefabInstance:
       propertyPath: depthBeforeSubmerged
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: exp
+      value: 
+      objectReference: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+        type: 3}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1046,6 +1052,12 @@ PrefabInstance:
       propertyPath: depthBeforeSubmerged
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: exp
+      value: 
+      objectReference: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+        type: 3}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1286,6 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e490374b85bbfc4ca5130cae0e13002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exp: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!1001 &4220408556408816420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1641,6 +1654,12 @@ PrefabInstance:
       propertyPath: depthBeforeSubmerged
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: exp
+      value: 
+      objectReference: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+        type: 3}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z
