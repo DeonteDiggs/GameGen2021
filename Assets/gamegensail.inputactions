@@ -14,14 +14,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Blow",
-                    "type": "Button",
-                    "id": "1b56605b-b4d1-4b69-87b3-04f24708b0a7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Shoot",
                     "type": "Button",
                     "id": "1bbfdc6c-ef99-40c3-a816-38ff343bd94d",
@@ -38,37 +30,23 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Blow Release",
+                    "name": "start_blow",
                     "type": "Button",
-                    "id": "498fc245-645d-479c-9539-d9881330c99b",
+                    "id": "9b09d58c-2743-4515-99d1-26b7f6e49e7a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "stop_blow",
+                    "type": "Button",
+                    "id": "b31d05c7-654b-4181-96b0-585d0c5fd862",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Blow",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Keyboard>/#(Z)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Blow",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "Keyboard",
                     "id": "9ebfcccc-ad71-4f87-9eda-8b9af51d933b",
@@ -225,23 +203,23 @@
                 },
                 {
                     "name": "",
-                    "id": "0ba6c0d0-2a2b-485a-9f42-2a0ad8f1f2c8",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
+                    "id": "93e5d0cd-74ff-4ea0-aca8-da4bf55186a8",
+                    "path": "<Keyboard>/z",
+                    "interactions": "Press",
                     "processors": "",
-                    "groups": "",
-                    "action": "Blow Release",
+                    "groups": "Keyboard&Mouse",
+                    "action": "start_blow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "9c94c46e-fcfa-42de-a32f-77264ecd970b",
+                    "id": "6d7da5a4-503e-4943-bcf8-370ac27276e9",
                     "path": "<Keyboard>/z",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
-                    "groups": "",
-                    "action": "Blow Release",
+                    "groups": "Keyboard&Mouse",
+                    "action": "stop_blow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

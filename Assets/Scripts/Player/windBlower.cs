@@ -12,6 +12,9 @@ using UnityEngine.InputSystem;
 */
 public class windBlower : MonoBehaviour
 {
+    //calling the input manager
+    private Gamegensail gamegensail;
+
     // Variable that stores our boat object obtained by raycasting.
     public Rigidbody boatRb;
 
@@ -32,6 +35,18 @@ public class windBlower : MonoBehaviour
     // How much force do we apply to boat?
     public float boatForce;
 
+    private bool blowEnabled;
+
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    private void Awake()
+    {
+        gamegensail = new Gamegensail();
+        gamegensail.Player.start_blow.performed += (context) => startBlow();
+        gamegensail.Player.stop_blow.performed += context1 => stopBlow();
+    }
+
     void Start()
     {
         targetGameObject = transform.parent.gameObject;
@@ -43,6 +58,11 @@ public class windBlower : MonoBehaviour
     {
         //checkForBoat();
         transform.RotateAround(targetGameObject.transform.position, Vector3.up, ((moveSpeed * direction) * Time.deltaTime));
+
+        if(blowEnabled){
+            Debug.Log("Fire!");
+            CheckForBoat();
+        }
     }
 
     //called by button press; sends a raycast to check for boat object.
@@ -74,10 +94,32 @@ public class windBlower : MonoBehaviour
     }
 
     //==Input Code==
-    public void Blow(InputAction.CallbackContext context)
+    public void startBlow()
     {
-        Debug.Log("Fire!");
-        CheckForBoat();
+        Debug.Log("Start to blow!!");
+        blowEnabled = true;
+    }
+
+    public void stopBlow()
+    {
+        Debug.Log("Stop to blow!!");
+        blowEnabled = false;
+    }
+
+    /// <summary>
+    /// This function is called when the object becomes enabled and active.
+    /// </summary>
+    private void OnEnable()
+    {
+        gamegensail.Enable();
+    }
+
+    /// <summary>
+    /// This function is called when the behaviour becomes disabled or inactive.
+    /// </summary>
+    void OnDisable()
+    {
+        gamegensail.Disable();
     }
 
     // Move around a radius
