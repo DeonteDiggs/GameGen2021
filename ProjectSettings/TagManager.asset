@@ -8,6 +8,7 @@ TagManager:
   - hazard
   - Destination
   - Spawner
+  - targetObject
   layers:
   - Default
   - TransparentFX
