@@ -22,3 +22,7 @@ The low poly cloud that blows the wind into the sails come from the unity asset 
 The low poly water comes from the site ArtStation (https://www.artstation.com/artwork/XL8RL). You can download the asset for free on gumroad: https://gumroad.com/l/BPwOy
 
 The music in the background comes from SoundCloud, copyright and royalty free. The user who created this piece is TheKingCairns: https://soundcloud.com/thekingcairns/epic-pirate-music-pirate-crew
+
+---- Sounds ----
+
+The boat crash sound and the cannon firing sound both come from freesoundeffect.com where sounds are made available for personal non-commercial projects: https://www.freesoundeffects.com/free-sounds/explosion-10070/20/tot_sold/20/2/
