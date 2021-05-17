@@ -20,3 +20,5 @@ Multiple models from https://www.kenney.nl/, a site with free assets to use:
 The low poly cloud that blows the wind into the sails come from the unity asset store for free: https://assetstore.unity.com/packages/3d/3le-low-poly-cloud-pack-65911#content
 
 The low poly water comes from the site ArtStation (https://www.artstation.com/artwork/XL8RL). You can download the asset for free on gumroad: https://gumroad.com/l/BPwOy
+
+The music in the background comes from SoundCloud, copyright and royalty free. The user who created this piece is TheKingCairns: https://soundcloud.com/thekingcairns/epic-pirate-music-pirate-crew
