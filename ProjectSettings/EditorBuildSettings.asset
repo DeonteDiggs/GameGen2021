@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 5c36f381d140c8b48817e61c858b55dd
   - enabled: 1
-    path: Assets/Scenes/parker_newScene.unity
-    guid: eea0032083cdbbb48afb28d4be3efd8c
+    path: Assets/Scenes/Deonte_demo_attempt.unity
+    guid: 69220b0e06700904c9711e5379c7807e
   m_configObjects: {}
