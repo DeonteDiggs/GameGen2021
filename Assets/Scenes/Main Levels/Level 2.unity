@@ -2063,6 +2063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5651438535561150293, guid: 3ff97473985353f43a7f678d95e695c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5934049232153848264, guid: 3ff97473985353f43a7f678d95e695c0,
         type: 3}
       propertyPath: m_IsActive
