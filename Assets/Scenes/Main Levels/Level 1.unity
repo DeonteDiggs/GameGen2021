@@ -2407,6 +2407,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 199034989, guid: 3ff97473985353f43a7f678d95e695c0, type: 3}
+      propertyPath: GameOverScene
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1376388698848806911, guid: 3ff97473985353f43a7f678d95e695c0,
         type: 3}
       propertyPath: m_IsActive
@@ -4032,6 +4036,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570571489}
   m_Mesh: {fileID: 918834617132525887, guid: 26c9de4e83b24954994d0aff18c31120, type: 3}
+--- !u!114 &591979930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 199034989, guid: 3ff97473985353f43a7f678d95e695c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 359699562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b8bc82be9fcfc46b72c5193d0f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &629210723
 GameObject:
   m_ObjectHideFlags: 0
@@ -10937,6 +10953,11 @@ PrefabInstance:
       propertyPath: audioclip
       value: 
       objectReference: {fileID: 8300000, guid: a47698530d4cd104f87d4b4155607876, type: 3}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: gamehandler
+      value: 
+      objectReference: {fileID: 591979930}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -11490,6 +11511,11 @@ PrefabInstance:
       propertyPath: audioclip
       value: 
       objectReference: {fileID: 8300000, guid: a47698530d4cd104f87d4b4155607876, type: 3}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: gamehandler
+      value: 
+      objectReference: {fileID: 591979930}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -13416,6 +13442,11 @@ PrefabInstance:
       propertyPath: audioclip
       value: 
       objectReference: {fileID: 8300000, guid: a47698530d4cd104f87d4b4155607876, type: 3}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: gamehandler
+      value: 
+      objectReference: {fileID: 591979930}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z

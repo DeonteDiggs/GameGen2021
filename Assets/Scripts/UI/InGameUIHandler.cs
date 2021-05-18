@@ -115,12 +115,15 @@ public class InGameUIHandler : MonoBehaviour
     public void ChangeNextScene() => SceneManager.LoadScene(nextScene);
 
     public void ChangeShipCount() {
-        if (shipCount <= 0)
-        {
-            GameOver();
-        }
+        
+        
         shipCount--;
         shipCountText.text = "" + shipCount;
+        if (shipCount <= 0)
+        {
+
+            GameOver();
+        }
     }
 
     public void ResultMenu()
