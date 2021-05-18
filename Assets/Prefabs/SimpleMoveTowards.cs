@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SimpleMoveTowards : MonoBehaviour
 {
-	public float speed = 20.0f;
+	public float speed = 0.001f;
 	public float minDist = 1f;
 	public Transform target;
 
