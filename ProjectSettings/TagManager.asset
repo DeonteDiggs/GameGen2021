@@ -9,6 +9,7 @@ TagManager:
   - Destination
   - Spawner
   - targetObject
+  - testObject
   layers:
   - Default
   - TransparentFX

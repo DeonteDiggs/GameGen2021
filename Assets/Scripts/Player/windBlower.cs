@@ -46,8 +46,8 @@ public class windBlower : MonoBehaviour
     private void Awake()
     {
         gamegensail = new Gamegensail();
-        gamegensail.Player.start_blow.performed += (context) => startBlow();
-        gamegensail.Player.stop_blow.performed += context1 => stopBlow();
+        gamegensail.Player.start_blow.performed += (ctx) => startBlow(ctx);
+        gamegensail.Player.stop_blow.performed += ctx => stopBlow(ctx);
     }
 
     void Start()
@@ -100,14 +100,14 @@ public class windBlower : MonoBehaviour
     }
 
     //==Input Code==
-    public void startBlow()
+    public void startBlow(InputAction.CallbackContext context)
     {
         Debug.Log("Start to blow!!");
         wind.GetComponent<ParticleSystem>().enableEmission = true;
         blowEnabled = true;
     }
 
-    public void stopBlow()
+    public void stopBlow(InputAction.CallbackContext context)
     {
         Debug.Log("Stop to blow!!");
         wind.GetComponent<ParticleSystem>().enableEmission = false;
@@ -148,13 +148,6 @@ public class windBlower : MonoBehaviour
             targetObjectScript.SwitchTargetShip(context.ReadValue<float>());
         }
         
-    }
-
-    // Get input to fire a projectile
-    public void Shoot(InputAction.CallbackContext context)
-    {
-        Debug.Log("Shoot!");
-        FireProjectile();
     }
 
     //Applies the boat force to our captured boat object.

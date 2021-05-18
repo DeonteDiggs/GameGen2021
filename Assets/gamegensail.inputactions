@@ -194,9 +194,9 @@
                     "name": "",
                     "id": "ab110cea-52b3-48a2-bc20-75b459601fcc",
                     "path": "<Keyboard>/x",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
