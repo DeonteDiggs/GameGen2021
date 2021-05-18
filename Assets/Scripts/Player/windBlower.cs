@@ -96,7 +96,12 @@ public class windBlower : MonoBehaviour
 
     void FireProjectile()
     {
+        Transform playerTransform = transform;
 
+        //Instantiate projectile at current targetted ship's forward position.
+        Vector3 positionShoot = gameplayManager.Instance.ships[targetObjectScript.shipIndex].transform.position;
+        positionShoot.z += 5;
+        GameObject shotFired = Instantiate(playerProjectile, positionShoot, Quaternion.identity);
     }
 
     //==Input Code==
@@ -153,8 +158,11 @@ public class windBlower : MonoBehaviour
     // Get input to fire a projectile
     public void Shoot(InputAction.CallbackContext context)
     {
-        Debug.Log("Shoot!");
-        FireProjectile();
+        if (context.performed) 
+        {
+            Debug.Log("Shoot!");
+            FireProjectile();
+        }
     }
 
     //Applies the boat force to our captured boat object.
