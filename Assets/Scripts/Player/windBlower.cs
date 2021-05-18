@@ -100,6 +100,7 @@ public class windBlower : MonoBehaviour
 
         //Instantiate projectile at current targetted ship's forward position.
         Vector3 positionShoot = gameplayManager.Instance.ships[targetObjectScript.shipIndex].transform.position;
+        positionShoot.y += 2;
         positionShoot.z += 5;
         GameObject shotFired = Instantiate(playerProjectile, positionShoot, Quaternion.identity);
     }

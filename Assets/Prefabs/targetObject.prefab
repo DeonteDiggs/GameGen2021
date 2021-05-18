@@ -4865,7 +4865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boatRb: {fileID: 0}
   targetGameObject: {fileID: 0}
-  playerProjectile: {fileID: 8111883151022319362, guid: 23e8baa1211300f458e05b9b457d1e56,
+  playerProjectile: {fileID: 8111883151022319362, guid: 0aeaad9b3e8158041b0bada550da27ca,
     type: 3}
   targetObjectScript: {fileID: 0}
   moveSpeed: 1500

@@ -24,7 +24,7 @@ public class cannonBall : MonoBehaviour
     //Destroy on collision
     //If colliding with hazards, also destroy those.
     void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag == "hazard") {
+        if (other.gameObject.tag == "hazard" || other.gameObject.tag == "invisibleWall") {
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

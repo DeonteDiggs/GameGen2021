@@ -10,6 +10,7 @@ TagManager:
   - Spawner
   - targetObject
   - playerProjectile
+  - invisibleWall
   layers:
   - Default
   - TransparentFX
