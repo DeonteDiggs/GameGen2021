@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 5041185684983332495}
   - component: {fileID: 3527137295146098172}
   - component: {fileID: 9060133435620128654}
+  - component: {fileID: 5001826327983494510}
+  - component: {fileID: 2409226402879336186}
   m_Layer: 0
-  m_Name: rock_tallB
+  m_Name: rock_obstacle1
   m_TagString: hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ee37ce1b800eb46a964082c12af4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
   minDist: 1
   target: {fileID: 0}
 --- !u!64 &9060133435620128654
@@ -112,3 +113,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4057254305547243137, guid: d3ca2655bdac09b49bed7e679f9bee50, type: 3}
+--- !u!114 &5001826327983494510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842410238186397530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fc733fd23eda3468b2afbbbb2081ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+--- !u!54 &2409226402879336186
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842410238186397530}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
