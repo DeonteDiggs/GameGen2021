@@ -10,11 +10,14 @@ public class InGameUIHandler : MonoBehaviour
     [SerializeField] private GameObject[] handleMenuActivations;
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject backButton;
+
+    [Header("Handle Switching Scene Info")]
     [SerializeField] private int currentScene;
     [SerializeField] private int nextScene;
+    [SerializeField] private int GameOverScene;
 
     [Header("shipCountInfo")]
-    private int shipCount = 0;
+    public static int shipCount = 0;
     [SerializeField] private Text shipCountText;
 
     [Header("Timer Info")]
@@ -29,14 +32,18 @@ public class InGameUIHandler : MonoBehaviour
 
     private void Start()
     {
-       
-        
+
+
         if (isFreeMode)
         {
             TimeSettings();
+            SetCount();
         }
-        else
+        else {
             Time.timeScale = 1f;
+            SetCount();
+        }
+            
 
     }
 
@@ -46,6 +53,10 @@ public class InGameUIHandler : MonoBehaviour
             Timer();
     }
 
+    void SetCount() {
+        shipCount = 3;
+        shipCountText.text = "" + shipCount;
+    }
     void TimeSettings()
     {
         Time.timeScale = 1;
@@ -62,7 +73,7 @@ public class InGameUIHandler : MonoBehaviour
             timer.text = "00:00";
 
             stopTimer = true;
-
+            StartCoroutine(WaitAfterTimerIsZero());
         }
         else
         {
@@ -104,8 +115,11 @@ public class InGameUIHandler : MonoBehaviour
     public void ChangeNextScene() => SceneManager.LoadScene(nextScene);
 
     public void ChangeShipCount() {
-
-        shipCount++;
+        if (shipCount <= 0)
+        {
+            GameOver();
+        }
+        shipCount--;
         shipCountText.text = "" + shipCount;
     }
 
@@ -117,4 +131,14 @@ public class InGameUIHandler : MonoBehaviour
 
         Time.timeScale = 0;
     }
+
+    public void GameOver() => SceneManager.LoadScene(GameOverScene);
+
+    public IEnumerator WaitAfterTimerIsZero()
+    {
+
+        yield return new WaitForSeconds(1.5f);
+        ResultMenu();
+    }
+
 }
