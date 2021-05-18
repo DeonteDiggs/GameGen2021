@@ -23,12 +23,7 @@ public class shipCollision : MonoBehaviour
             // Remove itself from the ship list in gameplay manager
             gameplayManager.Instance.ships.Remove(gameObject);
             Destroy(gameObject);
-<<<<<<< HEAD
             Destroy(explosion, particle.duration);
-=======
-
-            
->>>>>>> 27947b722f42dfc8470911a3e3dfe9707a53b260
         }
     }
 
