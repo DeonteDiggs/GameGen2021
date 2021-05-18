@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CutScenes/End Game.unity
     guid: 0a7660c592fefbf4699e7fa57220cd17
+  - enabled: 1
+    path: Assets/Scenes/Main Levels/Free Mode.unity
+    guid: 47ff73cd5c8fce04aa8dc84b46b3a008
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

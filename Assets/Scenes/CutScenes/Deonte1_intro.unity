@@ -253,6 +253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5079724026096615355, guid: 7edcf3b8930d9a8438dd72e8a1323feb,
+        type: 3}
+      propertyPath: freeModeScene
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7349718702893308206, guid: 7edcf3b8930d9a8438dd72e8a1323feb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
