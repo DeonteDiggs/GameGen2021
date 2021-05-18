@@ -9,6 +9,7 @@ public class shipCollision : MonoBehaviour
     private GameObject camera;
     public AudioClip audioclip;
     public GameObject exp;
+    public InGameUIHandler gamehandler;
 
     void OnCollisionEnter(Collision hit) 
     {
@@ -24,6 +25,7 @@ public class shipCollision : MonoBehaviour
             gameplayManager.Instance.ships.Remove(gameObject);
             Destroy(gameObject);
             Destroy(explosion, particle.duration);
+            gamehandler.ChangeShipCount();
         }
     }
 
