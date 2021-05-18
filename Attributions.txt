@@ -1,0 +1,28 @@
+All Assets and Resources In This Projects Are Under Free Licenses:
+
+--- Images ---
+
+The scroll behind the title of the game comes from the user Kevenodes on Vecteezy.com, link: https://www.vecteezy.com/vector-art/155818-pirate-scroll-paper.
+The use of this image is free when the attribution is granted, as done here.
+
+The logo for the Flying Sailors was made using the site Canva, where you can create designs for free: https://www.canva.com/
+
+---- Assets ----
+
+Multiple models from https://www.kenney.nl/, a site with free assets to use:
+  - The ships came from a Watercraft Pack: https://www.kenney.nl/assets/watercraft-pack
+  - The rock obstacles came from a Nature Pack: https://www.kenney.nl/assets/nature-kit
+  - The UI control buttons came from an Onscreen Controls Pack: https://www.kenney.nl/assets/onscreen-controls
+  - The game icons came from a Game Icons Pack: https://kenney.nl/assets/game-icons
+  - The fonts came from a Kenney Fonts Pack: https://kenney.nl/assets/kenney-fonts
+  - More UI controls came from a UI Pack: https://kenney.nl/assets/ui-pack
+  
+The low poly cloud that blows the wind into the sails come from the unity asset store for free: https://assetstore.unity.com/packages/3d/3le-low-poly-cloud-pack-65911#content
+
+The low poly water comes from the site ArtStation (https://www.artstation.com/artwork/XL8RL). You can download the asset for free on gumroad: https://gumroad.com/l/BPwOy
+
+The music in the background comes from SoundCloud, copyright and royalty free. The user who created this piece is TheKingCairns: https://soundcloud.com/thekingcairns/epic-pirate-music-pirate-crew
+
+---- Sounds ----
+
+The boat crash sound and the cannon firing sound both come from freesoundeffect.com where sounds are made available for personal non-commercial projects: https://www.freesoundeffects.com/free-sounds/explosion-10070/20/tot_sold/20/2/
