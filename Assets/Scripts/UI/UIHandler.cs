@@ -12,6 +12,8 @@ public class UIHandler: MonoBehaviour
        
 
     [SerializeField] private int nextScene;
+    [SerializeField] private int freeModeScene;
+
 
     private bool isOptionsMenu;
     
@@ -73,4 +75,7 @@ public class UIHandler: MonoBehaviour
             
         }
     }
+
+    public void OnFreeModeButton() => SceneManager.LoadScene(freeModeScene);
+    
 }

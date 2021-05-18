@@ -653,6 +653,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 60.58, y: 0, z: 0}
+--- !u!114 &1203399632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 199034989, guid: 3ff97473985353f43a7f678d95e695c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3586975018141937422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b8bc82be9fcfc46b72c5193d0f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1248581374
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +877,11 @@ PrefabInstance:
       propertyPath: depthBeforeSubmerged
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: inGameUIHandler
+      value: 
+      objectReference: {fileID: 1203399632}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1034,6 +1051,11 @@ PrefabInstance:
       propertyPath: depthBeforeSubmerged
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
+        type: 3}
+      propertyPath: inGameUIHandler
+      value: 
+      objectReference: {fileID: 1203399632}
     - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1205,6 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e490374b85bbfc4ca5130cae0e13002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inGameUIHandler: {fileID: 1203399632}
 --- !u!1001 &3586975018141937422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1212,6 +1235,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3586975018003064622, guid: 3ff97473985353f43a7f678d95e695c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3586975018301483409, guid: 3ff97473985353f43a7f678d95e695c0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1322,75 +1350,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGameCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4828753809468820692, guid: 3ff97473985353f43a7f678d95e695c0,
+    - target: {fileID: 8911625953946782854, guid: 3ff97473985353f43a7f678d95e695c0,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 152.64069
-      objectReference: {fileID: 0}
-    - target: {fileID: 4828753809468820692, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 80.27788
-      objectReference: {fileID: 0}
-    - target: {fileID: 4828753809468820692, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 25.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4828753809468820692, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -11.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_Text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: e4430c480cb0e424b8e415320f6cc71a,
-        type: 3}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 76
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 76
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6082047514168799497, guid: 3ff97473985353f43a7f678d95e695c0,
-        type: 3}
-      propertyPath: m_FontData.m_FontStyle
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1730,21 +1692,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636181771}
     m_Modifications:
-    - target: {fileID: 3275969839695939500, guid: b6c782affb5340f4299be0724c348c92,
+    - target: {fileID: 4835533910863820642, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460439138714849239, guid: b6c782affb5340f4299be0724c348c92,
-        type: 3}
-      propertyPath: depthBeforeSubmerged
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6611892519607918308, guid: b6c782affb5340f4299be0724c348c92,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.84
-      objectReference: {fileID: 0}
+      propertyPath: inGameUIHandler
+      value: 
+      objectReference: {fileID: 1203399632}
     - target: {fileID: 8337491420553031699, guid: b6c782affb5340f4299be0724c348c92,
         type: 3}
       propertyPath: m_RootOrder

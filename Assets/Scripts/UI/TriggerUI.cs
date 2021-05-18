@@ -6,14 +6,29 @@ public class TriggerUI : MonoBehaviour
 {
     [SerializeField] private Animation mainMenuFadeIn;
     [SerializeField] private Animation titleFadeIn;
-    
+    [SerializeField] private Animation titleBackgroundFadeIn;
+    public bool isInMainMenu;
+    public bool isInCutScene;
+
+    [SerializeField] private GameObject EndLevelMenu;
+
     private void OnTriggerEnter(Collider other)
     {
        
         if (other.gameObject.tag == "boat")
         {
-            StartCoroutine(WaitBeforeTitleFadeIn());
-            StartCoroutine(WaitBeforeMenuFadeIn());
+            
+            if (isInMainMenu)
+            {
+                StartCoroutine(WaitBeforeTitleFadeIn());
+                StartCoroutine(WaitBeforeMenuFadeIn());
+            }
+
+            else if (isInCutScene) {
+                StartCoroutine(WaitBeforeEndLevelMenu());
+                
+
+            }
             
         }
     }
@@ -28,6 +43,14 @@ public class TriggerUI : MonoBehaviour
     {
         
         yield return new WaitForSeconds(2f);
+        titleBackgroundFadeIn.Play();
         titleFadeIn.Play();
+    }
+    
+    public IEnumerator WaitBeforeEndLevelMenu()
+    {
+        
+        yield return new WaitForSeconds(1.5f);
+        EndLevelMenu.SetActive(true);
     }
 }
