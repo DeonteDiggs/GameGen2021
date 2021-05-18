@@ -23,9 +23,10 @@ public class shipCollision : MonoBehaviour
             ParticleSystem.MainModule particle = explosion.GetComponent<ParticleSystem>().main;
             // Remove itself from the ship list in gameplay manager
             gameplayManager.Instance.ships.Remove(gameObject);
+            gamehandler.ChangeShipCount();
             Destroy(gameObject);
             Destroy(explosion, particle.duration);
-            gamehandler.ChangeShipCount();
+            
         }
     }
 

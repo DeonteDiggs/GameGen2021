@@ -9,8 +9,10 @@ public class TriggerUI : MonoBehaviour
     [SerializeField] private Animation titleBackgroundFadeIn;
     public bool isInMainMenu;
     public bool isInCutScene;
+   
 
     [SerializeField] private GameObject EndLevelMenu;
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,6 +31,7 @@ public class TriggerUI : MonoBehaviour
                 
 
             }
+           
             
         }
     }
