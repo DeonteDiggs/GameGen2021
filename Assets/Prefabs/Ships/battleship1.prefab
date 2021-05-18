@@ -1786,7 +1786,7 @@ GameObject:
   - component: {fileID: 8012644149110211894}
   - component: {fileID: 2649201522552593500}
   - component: {fileID: 3387226033976918839}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: battleship1
   m_TagString: boat
   m_Icon: {fileID: 0}

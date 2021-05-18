@@ -1469,6 +1469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
@@ -1494,6 +1499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1034724685}
+    - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1034724685}
@@ -1507,6 +1517,11 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1034724685}
+    - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -1534,6 +1549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchShips
       objectReference: {fileID: 0}
@@ -1546,6 +1566,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: stopBlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
         type: 3}
