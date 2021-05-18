@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 4220408556412409834}
   - component: {fileID: 4220408556412409833}
   - component: {fileID: 4220408556412409832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: windObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4865,7 +4865,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boatRb: {fileID: 0}
   targetGameObject: {fileID: 0}
-  playerProjectile: {fileID: 0}
+  playerProjectile: {fileID: 8111883151022319362, guid: 0aeaad9b3e8158041b0bada550da27ca,
+    type: 3}
   targetObjectScript: {fileID: 0}
   moveSpeed: 1500
   direction: 0
@@ -4953,7 +4954,18 @@ MonoBehaviour:
     m_ActionId: da448b2c-41db-4a62-a776-d008689a7779
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4220408556412409834}
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1bbfdc6c-ef99-40c3-a816-38ff343bd94d
     m_ActionName: Player/Shoot[/Keyboard/x]
   - m_PersistentCalls:

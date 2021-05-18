@@ -13110,6 +13110,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220408556412409833, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -13243,6 +13248,12 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 600
       objectReference: {fileID: 0}
+    - target: {fileID: 4220408556412409834, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
+        type: 3}
+      propertyPath: playerProjectile
+      value: 
+      objectReference: {fileID: 8111883151022319362, guid: 0aeaad9b3e8158041b0bada550da27ca,
+        type: 3}
     - target: {fileID: 4220408556412409839, guid: 01fdd1b4a77bf854489bd3c4ba42ec7a,
         type: 3}
       propertyPath: m_LocalPosition.y
