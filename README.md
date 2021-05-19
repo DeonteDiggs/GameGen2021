@@ -1,18 +1,10 @@
 # GameGen 2021
-This is a *very quick/rough* prototype of the Wind-blowing mechanic.
 
-Input is handled through Unity's new Input Management System, using Unity Events.
+This repository is created for the game *"Wave of Wanderers"* by the team **Flying Sailors** for the Virtual GameJam 2021. 
 
-There are three main objects right now
+### Game Objective
+The objective of the game is to complete all the levels protecting the ships by dodging and shooting at the obstacles on the way. Game overs once all the ships are destoryed. 
+A free mode is also offered in the game which allows the player to play endlessly for the survival.
 
- - A shipObject (a sphere)
- - The windObject (that's what we control directly)
- - targetObject
-
-shipObject is a ship; it has a boat tag, and can be affected by the player's wind power. 
-There is no associated code.
-
-windObject is directly controlled by the player; it rotates around targetObject using the rotateAround function, and it use's raycasting to check if shipObject is in front of the player.
-
-targetObject just exists as a point in space for windObject to rotate around.
-# GameGen2021
+### Game Mechanics
+The game starts with 3 boats, and there is a windblower cloud attached to each ship which allows the player to move the ship in the direction the wind is blown on a ship on a keyboard Z press. The windblower could be moved around 360 degrees using the right and left arrow keys. The shooting functionality is triggered by the press of X on the keyboard and is useful to destory the obstacles. The player also has the option to switch between the various ships using up and down arrow keys.  
