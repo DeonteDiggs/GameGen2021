@@ -8,3 +8,6 @@ A free mode is also offered in the game which allows the player to play endlessl
 
 ### Game Mechanics
 The game starts with 3 boats, and there is a windblower cloud attached to each ship which allows the player to move the ship in the direction the wind is blown on a ship on a keyboard Z press. The windblower could be moved around 360 degrees using the right and left arrow keys. The shooting functionality is triggered by the press of X on the keyboard and is useful to destory the obstacles. The player also has the option to switch between the various ships using up and down arrow keys.  
+
+### To Play the Game
+The easiest way to play the game is to download the setup from the installer folder. Another way is to clone the repo and start the executable file from the releases folder which would not require any setup. 
