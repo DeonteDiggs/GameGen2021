@@ -49,12 +49,12 @@ public class gameplayManager : Singleton<gameplayManager>
         //use GameObject.getgameobjectswithtag to get array of ships in play.
         //convert this ship to a nice list.
         GameObject[] shipArray = GameObject.FindGameObjectsWithTag("boat");
-        Debug.Log(shipArray.Length);
+        //Debug.Log(shipArray.Length);
 
         // For length of array, copy each array element to the list
         for(int i = 0; i < shipArray.Length; ++i) {
             ships.Add(shipArray[i]);
-            Debug.Log(shipArray[i] + "copied to" + ships[i]);
+            //Debug.Log(shipArray[i] + "copied to" + ships[i]);
         }
     }
 

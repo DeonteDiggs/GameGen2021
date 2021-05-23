@@ -42,7 +42,7 @@ public class targetObject : MonoBehaviour
 
         shipIndex += (int)value;
 
-        Debug.Log(shipIndex);
+        //Debug.Log(shipIndex);
 
         int currentShipCount = gameplayManager.Instance.ships.Count;
 

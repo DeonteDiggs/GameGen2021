@@ -12,11 +12,11 @@ public class InGameUIHandler : MonoBehaviour
     [SerializeField] private GameObject backButton;
 
     [Header("Handle Switching Scene Info")]
-    [SerializeField] private int currentScene;
-    [SerializeField] private int nextScene;
     [SerializeField] private int GameOverScene;
+    Scene sceneControl;
+    public bool isInGameScene;
 
-    [Header("shipCountInfo")]
+    [Header("Ship Count Info")]
     public static int shipCount = 0;
     [SerializeField] private Text shipCountText;
 
@@ -39,8 +39,13 @@ public class InGameUIHandler : MonoBehaviour
             TimeSettings();
             SetCount();
         }
-        else {
+
+        else if(isInGameScene)
+        {
+
             Time.timeScale = 1f;
+            sceneControl = SceneManager.GetActiveScene();
+           
             SetCount();
         }
             
@@ -49,12 +54,15 @@ public class InGameUIHandler : MonoBehaviour
 
     private void Update()
     {
-        if (!stopTimer)
+        if (!stopTimer && isFreeMode)
             Timer();
     }
 
     void SetCount() {
+
         shipCount = 3;
+        GameSaveManager.gameSaveManager.saveData.trackBoatCount = shipCount;
+        
         shipCountText.text = "" + shipCount;
     }
     void TimeSettings()
@@ -71,7 +79,7 @@ public class InGameUIHandler : MonoBehaviour
         if (currentSeconds <= 0)
         {
             timer.text = "00:00";
-
+            
             stopTimer = true;
             StartCoroutine(WaitAfterTimerIsZero());
         }
@@ -94,16 +102,18 @@ public class InGameUIHandler : MonoBehaviour
         handleMenuActivations[1].SetActive(true);
         backButton.SetActive(true);
     }
-    public void OnRestartButton() {
-        SceneManager.LoadScene(currentScene);
-    }
+    public void OnRestartButton() => ChangeScene(sceneControl.buildIndex);
+    public void OnContinueButton() => ChangeScene(sceneControl.buildIndex + 1);
+    public void OnTryAgainButton() => ChangeScene(GameSaveManager.gameSaveManager.saveData.trackSceneIndex);
+
+
     public void OnResumeButton() {
         handleMenuActivations[0].SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
     }
 
-    public void OnQuitButton() => SceneManager.LoadScene(0);
+    public void OnQuitButton(int changeScene) => ChangeScene(changeScene);
 
     public void OnControlsButton() => handleMenuActivations[2].SetActive(true);
 
@@ -112,16 +122,23 @@ public class InGameUIHandler : MonoBehaviour
         handleMenuActivations[0].SetActive(true);
     }
 
-    public void ChangeNextScene() => SceneManager.LoadScene(nextScene);
+    public void ChangeScene(int changeScene) => SceneManager.LoadScene(changeScene);
 
     public void ChangeShipCount() {
+
+        if (shipCount > 0)
+        {
+            shipCount--;
+            GameSaveManager.gameSaveManager.saveData.trackBoatCount = shipCount;
+            GameSaveManager.gameSaveManager.SaveGame();
+            shipCountText.text = "" + shipCount;
+        }
         
-        
-        shipCount--;
-        shipCountText.text = "" + shipCount;
         if (shipCount <= 0)
         {
-
+            
+            GameSaveManager.gameSaveManager.saveData.trackSceneIndex = sceneControl.buildIndex;
+            GameSaveManager.gameSaveManager.SaveGame();
             GameOver();
         }
     }
@@ -129,10 +146,13 @@ public class InGameUIHandler : MonoBehaviour
     public void ResultMenu()
     {
         handleMenuActivations[3].SetActive(true);
-
-        shipCountText.text = "" + shipCount;
-
-        Time.timeScale = 0;
+        //GameSaveManager.gameSaveManager.LoadGame();
+        
+        int num = GameSaveManager.gameSaveManager.saveData.trackBoatCount;
+      
+        shipCountText.text = num.ToString();
+        print(shipCountText.text);
+        
     }
 
     public void GameOver() => SceneManager.LoadScene(GameOverScene);

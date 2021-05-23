@@ -11,6 +11,7 @@ public class LoadScene : MonoBehaviour
     {
         if (other.tag == "FinishLine")
         {
+            print("hi");
             SceneManager.LoadScene(SceneName); // loads scene When player enter the trigger collider
         }
     }

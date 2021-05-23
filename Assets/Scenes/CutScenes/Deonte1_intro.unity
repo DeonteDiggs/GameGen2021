@@ -258,6 +258,11 @@ PrefabInstance:
       propertyPath: freeModeScene
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5079724026096615355, guid: 7edcf3b8930d9a8438dd72e8a1323feb,
+        type: 3}
+      propertyPath: gameTitleBackground
+      value: 
+      objectReference: {fileID: 1925315230}
     - target: {fileID: 7349718702893308206, guid: 7edcf3b8930d9a8438dd72e8a1323feb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1256,6 +1261,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -136.358, z: 0}
+--- !u!1 &1925315230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3930667320736079125, guid: 7edcf3b8930d9a8438dd72e8a1323feb,
+    type: 3}
+  m_PrefabInstance: {fileID: 146013751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2111673609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100044, guid: b145870054d5de24da06da86bcb3cba2,

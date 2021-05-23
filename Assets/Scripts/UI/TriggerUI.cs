@@ -9,14 +9,14 @@ public class TriggerUI : MonoBehaviour
     [SerializeField] private Animation titleBackgroundFadeIn;
     public bool isInMainMenu;
     public bool isInCutScene;
-   
-
-    [SerializeField] private GameObject EndLevelMenu;
     
+
+   
+    public InGameUIHandler inGameUI;
 
     private void OnTriggerEnter(Collider other)
     {
-       
+
         if (other.gameObject.tag == "boat")
         {
             
@@ -54,6 +54,7 @@ public class TriggerUI : MonoBehaviour
     {
         
         yield return new WaitForSeconds(1.5f);
-        EndLevelMenu.SetActive(true);
+       
+        inGameUI.ResultMenu();
     }
 }

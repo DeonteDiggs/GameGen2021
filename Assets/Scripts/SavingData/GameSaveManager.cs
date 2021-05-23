@@ -28,7 +28,7 @@ public class GameSaveManager : MonoBehaviour
 
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(SaveData));
         FileStream fileStream = new FileStream(dataPath + "/flyingSailors.saveData", FileMode.Create);
-
+        //print(fileStream);
         xmlSerializer.Serialize(fileStream, saveData);
         fileStream.Close();
         //isFirstSave = true;
@@ -70,20 +70,16 @@ public class GameSaveManager : MonoBehaviour
 [System.Serializable]
 public class SaveData
 {
-    [Header("OptionsMenuData")]
+    /*[Header("OptionsMenuData")]
     public float volume = 0.5f;
-
     public bool sfx = true;
 
-    [Header("ButtonData")]
-    public bool isButtonInactive;
-
+*/
     [Header("InGameData")]
-    public int trackLevelCount = 1;
-    public bool isLevelComplete;
+    public int trackSceneIndex;
+    public int trackBoatCount;
 
 
-
-    [Header("ResultMenu")]
-    public string[] bestTime = new string[9];
+   
+    
 }
